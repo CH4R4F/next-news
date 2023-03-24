@@ -1,7 +1,14 @@
+import { categories } from "@/constants";
+import fetchNews from "@/lib/fetchNews";
+
 export const metadata = {
-  title: "Home page",
+  title: "Next News",
 };
 
-export default function Home() {
-  return <h1 className="text-4xl">Hello world</h1>;
+export default async function Home() {
+  const news: NewsResponse = await fetchNews(categories.join(","), "");
+
+  console.log(news);
+
+  return <h1>hello</h1>;
 }
