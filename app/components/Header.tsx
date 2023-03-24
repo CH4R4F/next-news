@@ -1,6 +1,7 @@
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import Categories from "./Categories";
+import Search from "./Search";
 
 function Header(): JSX.Element {
   return (
@@ -28,6 +29,9 @@ function Header(): JSX.Element {
 
       {/* categories */}
       <Categories />
+
+      {/* search */}
+      <Search />
     </header>
   );
 }
