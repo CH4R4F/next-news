@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const Categories = () => {
   const pathname = usePathname();
   return (
-    <nav className="overflow-y-auto whitespace-nowrap scroll-hidden max-w-4xl mx-auto flex justify-center">
+    <nav className="overflow-y-auto whitespace-nowrap scroll-hidden max-w-4xl mx-auto flex justify-between">
       {categories.map((category) => (
         <CategoryItem
           key={category}
