@@ -10,6 +10,10 @@
 
 @layer components {
   .category-item {
-    @apply hover:underline text-text_black decoration-text_black text-center active:underline underline-offset-8 rounded-full p-4 cursor-pointer hover:text-black capitalize;
+    @apply hover:underline text-text_black decoration-text_black text-center active:underline underline-offset-8 rounded-full p-4 cursor-pointer hover:text-black capitalize dark:text-text_white dark:hover:text-white dark:decoration-text_white;
+  }
+
+  .title {
+    @apply text-4xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-orange-700 dark:from-white dark:to-orange-700;
   }
 }

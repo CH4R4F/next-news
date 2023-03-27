@@ -17,28 +17,26 @@ const ArticleCard = ({ article }: Props) => {
             <Image src={article.image} alt={article.title} fill={true} />
           </div>
         ) : (
-          <div className="relative w-full h-48 overflow-hidden rounded-lg shadow-md bg-bg_white border-2 border-bg_black flex items-center justify-center">
-            <p className="text-4xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-orange-700">
-              Next News
-            </p>
+          <div className="relative w-full h-48 overflow-hidden rounded-lg shadow-md bg-bg_white dark:bg-slate-700 border-2 border-bg_black dark:border-orange-500 flex items-center justify-center">
+            <p className="title">Next News</p>
           </div>
         )}
       </Link>
       <div className="mt-3 space-y-2">
         <Link title={article.title} href={`/news/${article.title}`}>
           <div className="mb-2 flex items-center space-x-3">
-            <span className="block text-text_black text-sm">
+            <span className="block text-text_black text-sm dark:text-text_white">
               {article.published_at.split("T")[0]}
             </span>
-            <div className="px-3 py-1 text-xs bg-slate-400 rounded-sm">
+            <div className="px-3 py-1 text-xs bg-slate-400 dark:bg-slate-600 rounded-sm">
               {article.category}
             </div>
           </div>
-          <h3 className="text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-semibold line-clamp-2">
+          <h3 className="text-lg text-gray-800 duration-150 group-hover:text-orange-600 font-semibold line-clamp-2 dark:text-white">
             {article.title}
           </h3>
         </Link>
-        <p className="text-gray-600 text-sm duration-150 group-hover:text-gray-800 line-clamp-6">
+        <p className="text-text_black dark:text-text_white/50 text-sm duration-150 group-hover:text-text_important_black line-clamp-6 dark:group-hover:text-text_white">
           {article.description}
         </p>
       </div>
